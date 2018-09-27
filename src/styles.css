@@ -3,5 +3,14 @@
 
 .ng-select {
   font-size: 22px;
-  line-height: 15px;
+  background-color: yellow;
 }
+
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option,
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+

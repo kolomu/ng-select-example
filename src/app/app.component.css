@@ -2,6 +2,14 @@
   display: inline-block;
 }
 
+.has-icon {
+  padding-right: 6px;
+}
+
+.no-icon {
+  padding-right: 28px;
+}
+
 .option-label {
   display: inline-block;
 }

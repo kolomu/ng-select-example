@@ -14,7 +14,12 @@
     </ng-template>
 
       <ng-template ng-option-tmp let-item="item" let-index="index" let-search="searchTerm">
-        <div class="option-icon" *ngIf="item.title === selectedCountry"><i class="material-icons">done</i></div>
+        <div class="option-icon" [ngClass]="{
+          'has-icon': item.title === selectedCountry,
+          'no-icon': item.title !== selectedCountry
+        }">
+          <i *ngIf="item.title === selectedCountry" class="material-icons">done</i>
+        </div>
         <div class="option-label">{{item.title}}</div>
       </ng-template>
 
