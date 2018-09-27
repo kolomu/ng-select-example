@@ -1,4 +1,4 @@
-<h1>Ng Select Example</h1>
+<h1>NG-Select Example</h1>
 
 <label>Select Country</label>
 <ng-select
@@ -6,9 +6,16 @@
   [(ngModel)]="selectedCountry"
   bindLabel="title"
   bindValue="title"
-  [searchable]="false">
+  [searchable]="false"
+  [clearable]="false">
     <ng-template ng-label-tmp let-item="item">
-        <img height="15" width="15" [src]="item.avatar"/>
+      <div class="option-icon"><i class="material-icons">done</i></div>
         {{item.title}}
     </ng-template>
+
+      <ng-template ng-option-tmp let-item="item" let-index="index" let-search="searchTerm">
+        <div class="option-icon" *ngIf="item.title === selectedCountry"><i class="material-icons">done</i></div>
+        <div class="option-label">{{item.title}}</div>
+      </ng-template>
+
 </ng-select>
