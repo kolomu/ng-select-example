@@ -1,14 +1,14 @@
 <h1>Ng Select Example</h1>
 
-<label>Custom label</label>
+<label>Select Country</label>
 <ng-select
-  [items]="cities"
-  [(ngModel)]="selectedCity"
-  bindLabel="name"
-  bindValue="name"
+  [items]="countries"
+  [(ngModel)]="selectedCountry"
+  bindLabel="title"
+  bindValue="title"
   [searchable]="false">
     <ng-template ng-label-tmp let-item="item">
         <img height="15" width="15" [src]="item.avatar"/>
-        {{item.name}}
+        {{item.title}}
     </ng-template>
 </ng-select>
